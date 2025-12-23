@@ -10,7 +10,6 @@ def app_run():
     db.init_app(app)
 
     from .routes.auth import auth_bp
-
     app.register_blueprint(auth_bp,url_prefix = '/auth')
 
     with app.app_context():
