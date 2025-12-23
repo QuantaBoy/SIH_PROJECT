@@ -1,13 +1,19 @@
 from flask import Flask
+from .config import Config
+from .db import db
 
 def app_run():
     
-    app = Flask(__name__, static_folder='static', template_folder='templates')
+    app = Flask(__name__)
+    app.config.from_object(Config)
 
-    from .routes.login import login_bp
-    from .routes.signup import signup_bp
+    db.init_app(app)
 
-    app.register_blueprint(login_bp,url_prefix = '/login')
-    app.register_blueprint(signup_bp, url_prefix='/signup')
+    from .routes.auth import auth_bp
+
+    app.register_blueprint(auth_bp,url_prefix = '/auth')
+
+    with app.app_context():
+        db.create_all()
 
     return app
