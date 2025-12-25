@@ -15,8 +15,7 @@ def login():
         user = User.query.filter_by(email=email).first()
 
         if user and check_password_hash(user.password, password):
-            return "Login Successful"
-
+            return 'Login Successfull'
         return "Invalid Credentials"
 
     return render_template('login.html')
