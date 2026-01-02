@@ -12,6 +12,9 @@ def app_run():
     from .routes.auth import auth_bp
     app.register_blueprint(auth_bp,url_prefix = '/auth')
 
+    from .routes.subscription import subscription_bp
+    app.register_blueprint(subscription_bp,url_prefix = '/subscription')
+
     with app.app_context():
         db.create_all()
 
