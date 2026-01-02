@@ -49,16 +49,14 @@
 
 /* Main Title */
 .pricing-title {
-    position: absolute;
-  left: 80%;
-  top: 142px;
-  transform: translateX(-55%);
-  bottom: 650px;
+  position: absolute;
+  left: 243px;
+  top: 162px;
   width: 953px;
   height: 200px;
   font-family: 'Newsreader', serif;
   font-weight: 400;
-  font-size: 600px;
+  font-size: 300px;
   line-height: 1em;
   text-align: center;
   color: #FFFFFF;
@@ -81,7 +79,7 @@
   height: 592px;
   background: linear-gradient(26deg, rgba(255, 255, 255, 0.1) 22%, rgba(255, 255, 255, 0.2) 95%);
   backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(15px);
   border-radius: 30px;
   position: absolute;
   display: flex;
@@ -94,23 +92,23 @@
 }
 
 .pricing-card:nth-child(1) {
-  left: -9.8%;
-  top: 200px;
-  width: 35%;
+  left: -9.6%;
+  top: 240px;
+  width: 38%;
   height: 670px;
 }
 
 .pricing-card:nth-child(2) {
   left: 410px;
-  top: 200px;
+  top: 240px;
   height: 670px;
-  width: 35%;
+  width: 38%;
 }
 
 .pricing-card:nth-child(3) {
-  left: 970px;
-  top: 200px;
-  width: 35%;
+  left: 950px;
+  top: 240px;
+  width: 38%;
   height: 670px;
 }
 
@@ -162,7 +160,7 @@
 /* Plan Price */
 .plan-price {
   font-family: 'Newsreader', serif;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 55px;
   line-height: 1em;
   text-align: center;
@@ -436,50 +434,47 @@
   box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
 }
 
- .toggle-section {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 14px;
+.toggle-section {
   margin-top: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
 }
 
 .billed-yearly-text {
-  color: white;
-  font-size: 30px;
-  top: -500%;
-  line-height: 1.1;
-  text-align: right;
+  font-family: 'Newsreader', serif;
+  font-size: 24px;
+  color: #fff;
+  margin-top: -300px;
 }
 
-/* TOGGLE BODY */
+/* TOGGLE SWITCH */
 .toggle-container {
+  width: 51px;
+  height: 31px;
+  background: #fff;
+  border-radius: 100px;
   position: relative;
-  width: 46px;
-  height: 24px;
-  background: white;
-  border-radius: 50px;
   cursor: pointer;
+  top: -150px;
 }
 
-/* KNOB */
 .toggle-knob {
+  width: 27px;
+  height: 27px;
+  background: #000;
+  border-radius: 100px;
   position: absolute;
-  width: 16px;
-  height: 16px;
-  background: black;
-  border-radius: 50%;
-  top: 50%;
-  left: 4px;
-  transform: translateY(-50%);
-  transition: 0.3s ease;
+  top: 2px;
+  left: 2px;
+  transition: left .3s ease;
 }
 
-/* ON STATE */
-.toggle-container.active .toggle-knob {
-  left: 26px;
+.toggle-knob.toggle-on {
+  left: 22px !important;
 }
-
 
 /* Smooth transition for price changes */
 .pricing-cards {
@@ -488,7 +483,7 @@
 
 
 /* Responsive adjustments */
-@media (max-width: 1530px) {
+@media (max-width: 1440px) {
   .pricing-page {
     width: 100%;
     height: auto;
@@ -516,7 +511,6 @@
     justify-content: center;
     margin: 40px auto;
     padding-bottom: 40px;
-    
   }
 }
 
@@ -550,6 +544,12 @@
   transform: scale(0.55);  
   transform-origin: top center;
 }
+html, body {
+  width: 100%;
+  overflow-x: hidden;   /* removes horizontal scroll */
+  margin: 0;
+  padding: 0;
+}
 .toggle-knob.toggle-on {
   left: 22px !important;
 }
@@ -557,11 +557,3 @@
 .toggle-knob.toggle-off {
   left: 2px !important;
 }
-
-html, body {
-  width: 100%;
-  overflow-x: hidden;   /* removes horizontal scroll */
-  margin: 0;
-  padding: 0;
-}
- 
