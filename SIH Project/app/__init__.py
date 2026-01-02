@@ -15,6 +15,9 @@ def app_run():
     from .routes.subscription import subscription_bp
     app.register_blueprint(subscription_bp,url_prefix = '/subscription')
 
+    from .routes.home import home_bp
+    app.register_blueprint(home_bp,url_prefix='/')
+
     with app.app_context():
         db.create_all()
 
