@@ -7,7 +7,7 @@ leetcode_bp = Blueprint("leetcode", __name__)
 @leetcode_bp.route("/", methods=["GET"])
 def home():
     try:
-        df = pd.read_excel("data/leetcode_data.xlsx")
+        df = pd.read_excel("data/leetcode_data.xlsx", engine="openpyxl")
         table = df.to_html(index=False)
     except:
         table = None

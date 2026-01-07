@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>LeetCode Details</title>
+    <title>LeetCode Dashboard</title>
 </head>
 <body>
 
-<h2>LeetCode Dashboard</h2>
+<h2>LeetCode Details</h2>
 
-<form action="/leetcode/fetch" method="post">
-    <button type="submit">LeetCode Details</button>
+<form action="{{ url_for('leetcode.fetch') }}" method="post">
+    <button type="submit">Fetch LeetCode Data</button>
 </form>
 
 {% if table %}
-    <h3>Extracted Data</h3>
+    <h3>Results</h3>
     {{ table | safe }}
 {% endif %}
 
