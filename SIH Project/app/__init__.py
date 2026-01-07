@@ -18,6 +18,9 @@ def app_run():
     from .routes.home import home_bp
     app.register_blueprint(home_bp,url_prefix='/')
 
+    from app.routes.leetcode_routes import leetcode_bp
+    app.register_blueprint(leetcode_bp,url_prefix='/leetcode')
+
     with app.app_context():
         db.create_all()
 
