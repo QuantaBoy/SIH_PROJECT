@@ -5,7 +5,7 @@ profile_bp = Blueprint('profile',__name__)
 
 DATA_FILE = r'app/data/leetcodes_data.xlsx'
 
-@profile_bp.route('/<username>',methods=['GET'])
+@profile_bp.route('u/<username>',methods=['GET'])
 def get_profile(username):
     df = pd.read_excel(DATA_FILE,engine = 'openpyxl')
 
@@ -25,7 +25,7 @@ def get_profile(username):
                 "medium": int(user["medium_solved"]),
                 "hard": int(user["hard_solved"]),
                 "total": int(user["total_solved"]),
-                "ranking": int(user["ranking"]),
+                "ranking": int(user["ranking"]),    
                 "reputation": int(user["reputation"])
             }
         })

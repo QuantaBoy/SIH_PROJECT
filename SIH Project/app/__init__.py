@@ -21,7 +21,7 @@ def app_run():
     from app.routes.leetcode_routes import leetcode_bp
     app.register_blueprint(leetcode_bp,url_prefix='/leetcode')
 
-    from app.routes.profile_routes import profile_bp
+    from app.routes.user_routes import profile_bp
     app.register_blueprint(profile_bp,url_prefix='/profile')
 
     with app.app_context():
