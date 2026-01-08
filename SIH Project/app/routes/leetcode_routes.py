@@ -18,7 +18,6 @@ def home():
 
     return render_template("home.html", table=table)
 
-
 @leetcode_bp.route("/fetch", methods=["POST"])
 def fetch():
     threading.Thread(target=background_job, daemon=True).start()
