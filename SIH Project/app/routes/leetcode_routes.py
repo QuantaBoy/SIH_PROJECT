@@ -6,7 +6,7 @@ from app.services.background_fetcher import background_job
 
 leetcode_bp = Blueprint("leetcode", __name__)
 
-DATA_FILE = r"app/data/leetcodes_data.xlsx"
+DATA_FILE = r"app/data/leetcodes_data.xlsx" 
 
 @leetcode_bp.route("/", methods=["GET"])
 def home():
