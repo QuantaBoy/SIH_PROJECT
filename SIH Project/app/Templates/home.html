@@ -11,9 +11,15 @@
     <button type="submit">Fetch LeetCode Data</button>
 </form>
 
+<h3>Results</h3>
+
 {% if table %}
-    <h3>Results</h3>
     {{ table | safe }}
+{% else %}
+    <p>Fetching data… page will refresh automatically.</p>
+    <script>
+        setTimeout(() => location.reload(), 5000);
+    </script>
 {% endif %}
 
 </body>

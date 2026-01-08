@@ -1,20 +1,25 @@
 from flask import Blueprint, render_template, redirect, url_for
-from app.services.excel_service import update_leetcode_excel
 import pandas as pd
+import threading
+import os
+from app.services.background_fetcher import background_job
 
 leetcode_bp = Blueprint("leetcode", __name__)
 
+DATA_FILE = r"app/data/leetcodes_data.xlsx"
+
 @leetcode_bp.route("/", methods=["GET"])
 def home():
-    try:
-        df = pd.read_excel("data/leetcode_data.xlsx", engine="openpyxl")
+    if os.path.exists(DATA_FILE):
+        df = pd.read_excel(DATA_FILE, engine="openpyxl")
         table = df.to_html(index=False)
-    except:
+    else:
         table = None
+
     return render_template("home.html", table=table)
 
 
 @leetcode_bp.route("/fetch", methods=["POST"])
 def fetch():
-    update_leetcode_excel()
+    threading.Thread(target=background_job, daemon=True).start()
     return redirect(url_for("leetcode.home"))
