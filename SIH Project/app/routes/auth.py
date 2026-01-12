@@ -18,7 +18,7 @@ def login():
             return 'Login Successfull'
         return "Invalid Credentials"
 
-    return render_template('login.html')
+    return render_template('Login.html')
 
 @auth_bp.route('/signup', methods=['GET', 'POST'])
 def signup():
@@ -58,4 +58,4 @@ def signup():
 
         return redirect(url_for('auth.login'))
 
-    return render_template('signup.html')
+    return render_template('SignUp.html')
