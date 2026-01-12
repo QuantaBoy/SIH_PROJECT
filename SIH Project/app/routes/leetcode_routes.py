@@ -16,7 +16,7 @@ def home():
     else:
         table = None
 
-    return render_template("home.html", table=table)
+    return render_template("leetcode.html", table=table)
 
 @leetcode_bp.route("/fetch", methods=["POST"])
 def fetch():

@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messaging App</title>
+    <link rel="stylesheet" href="message.css">
+</head>
+<body>
+    <div class="container">
+       <div class="sidebar" id="sidebar">
+
+    <!-- Top icon (TOGGLE) -->
+    <div class="logo" id="toggleBtn">
+      <img src="C:\message\images\icons\icons8-menu-64 2.svg" class="icon" />
+      <span class="text">Menu</span>
+    </div>
+
+    <!-- Middle menu -->
+    <ul class="menu">
+      <li>
+        <img src="C:\message\images\icons\icons8-home-48 2.svg" class="icon" />
+        <span class="text">Home</span>
+      </li>
+      <li>
+        <img src="C:\message\images\icons\icons8-graduate-30 3.svg" class="icon" />
+        <span class="text">Courses</span>
+      </li>
+      <li>
+        <img src="C:\message\images\icons\icons8-message-30 3.svg" class="icon" />
+        <span class="text">Messages</span>
+      </li>
+      <li>
+        <img src="C:\message\images\icons\icons8-meeting-30 3.svg" class="icon" />
+        <span class="text">Meetings</span>
+      </li>
+      <li>
+        <img src="C:\message\images\icons/icons8-event-50 3.svg" class="icon" />
+        <span class="text">Events</span>
+      </li>
+      <li>
+        <img src="C:\message\images\icons/icons8-ticket-50 3.svg" class="icon" />
+        <span class="text">Membership</span>
+      </li>
+    </ul>
+
+    <!-- Bottom section -->
+    <div class="logout">
+      <li>
+        <img src="C:\message\images\icons/icons8-ai-64 3.svg" class="icon" />
+        <span class="text">AI Tools</span>
+      </li>
+      <li>
+        <img src="C:\message\images\icons/icons8-community-48 3.svg" class="icon" />
+        <span class="text">Community</span>
+      </li>
+      <li>
+        <img src="C:\message\images\icons/icons8-exit-48 2.svg" class="icon" />
+        <span class="text">Logout</span>
+      </li>
+    </div>
+
+  </div>
+
+
+        <!-- Messages List -->
+        <div class="messages-list">
+            <div class="messages-header">
+                <h2>Messages<span class="count">(15)</span></h2>
+                <div class="header-actions">
+                    <span class="icon">
+                        <img src="C:\message\images\edit.png" alt="edit">
+                    </span>
+                    <span class="icon">
+                        <img src="C:\message\images\search1.png" alt="search">
+                    </span>
+                </div>
+            </div>
+
+            <div class="online-status">
+                <span class="status-indicator">Online Now</span>
+                <a href="#" class="see-all">See all ›</a>
+            </div>
+
+            <div class="online-users">
+                <div class="online-user">
+                    <img src="C:\message\images\thomas.png" alt="Thomas">
+                    <span class="online-dot"></span>
+                </div>
+                <div class="online-user">
+                    <img src="C:\message\images\user1-5-2.png" alt="Krish">
+                    <span class="online-dot"></span>
+                </div>
+                <div class="online-user">
+                    <img src="C:\message\images\user4-8.png" alt="Mridula">
+                    <span class="online-dot"></span>
+                </div>
+                <div class="online-user">
+                    <img src="C:\message\images\user4-6.png" alt="Riyan">
+                    <span class="online-dot"></span>
+                </div>
+            </div>
+
+            <div class="pinned-section">
+                <span class="pin-icon">
+                    <img src="C:\message\images\pin.png" alt="pin">
+                </span>
+                <span>Pinned Chats</span>
+                <span class="more-icon">
+                    <img src="C:\message\images\morelite.png" alt="pin">
+                </span>
+            </div>
+
+            <div class="chat-list">
+                <div class="chat-item">
+                    <img src="C:\message\images\thomas.png" alt="Thomas" class="chat-avatar">
+                    <div class="chat-info">
+                        <div class="chat-name">Thomas</div>
+                        <div class="chat-preview">Hey there!</div>
+                    </div>
+                    <div class="chat-meta">
+                        <div class="chat-time">12:30</div>
+                    </div>
+                </div>
+
+                <div class="chat-item">
+                    <img src="C:\message\images\user1-5.png" alt="Mubee" class="chat-avatar">
+                    <div class="chat-info">
+                        <div class="chat-name">Mubee</div>
+                        <div class="chat-preview">Looking for a new...</div>
+                    </div>
+                    <div class="chat-meta">
+                        <div class="chat-time">8:00</div>
+                        <span class="unread-badge">1</span>
+                    </div>
+                </div>
+
+                <div class="ai-bots-section">
+                    <span class="robot-icon"> 
+                        <img src="C:\message\images\aibot.png" alt="pin">
+                    </span>
+                    <span>AI bots</span>
+                    <span class="more-icon"><img src="C:\message\images\morelite.png" alt="pin"></span>
+                </div>
+
+                <div class="chat-item">
+                    <img src="C:\message\images\bot2-1.png" alt="Claude" class="chat-avatar">
+                    <div class="chat-info">
+                        <div class="chat-name">Claude</div>
+                        <div class="chat-preview">Learn new skills...</div>
+                    </div>
+                    <div class="chat-meta">
+                        <div class="chat-time">15:00</div>
+                    </div>
+                </div>
+
+                <div class="chat-item">
+                    <img src="C:\message\images\bot3-1.png" alt="Digibot" class="chat-avatar">
+                    <div class="chat-info">
+                        <div class="chat-name">Digibot</div>
+                        <div class="chat-preview">Your image is ready...</div>
+                    </div>
+                    <div class="chat-meta">
+                        <div class="chat-time">14:00</div>
+                    </div>
+                </div>
+
+                <div class="all-messages-section">
+                    <span class="messages-icon">
+                        <img src="C:\message\images\allmsg.png" alt="pin">
+                    </span>
+                    <span>All Messages</span>
+                    <span class="more-icon">
+                         <img src="C:\message\images\morelite.png" alt="more">
+                    </span>
+                </div>
+
+                <div class="chat-item">
+                    <img src="C:\message\images\user4-6.png" alt="Riyan" class="chat-avatar">
+                    <div class="chat-info">
+                        <div class="chat-name">Riyan</div>
+                        <div class="chat-preview typing">Typing...</div>
+                    </div>
+                    <div class="chat-meta">
+                        <div class="chat-time">Now</div>
+                        <span class="unread-badge">2</span>
+                    </div>
+                </div>
+
+                <div class="chat-item">
+                    <img src="C:\message\images\user4-8.png" alt="Mridula" class="chat-avatar">
+                    <div class="chat-info">
+                        <div class="chat-name">Mridula</div>
+                         <div class="chat-preview">🎤 Voice message</div>
+                    </div>
+                    <div class="chat-meta">
+                        <div class="chat-time">8:00</div>
+                        <span class="unread-badge">1</span>
+                    </div>
+                </div>
+
+                <div class="chat-item">
+                    <img src="images/user1-5-2.png" alt="Krish" class="chat-avatar">
+                    <div class="chat-info">
+                        <div class="chat-name">Krish</div>
+                        <div class="chat-preview">🎤 Voice message</div>
+                    </div>
+                    <div class="chat-meta">
+                        <div class="chat-time">12:00</div>
+                        <span class="unread-badge">1</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chat Area -->
+        <div class="chat-area">
+            <div class="chat-header">
+                <div class="chat-user-info">
+                    <img src="C:\message\images\user4-6.png" alt="William" class="header-avatar">
+                    <div>
+                        <div class="header-name">William</div>
+                        <div class="header-status">Online</div>
+                    </div>
+                </div>
+                <div class="chat-actions">
+                    <span class="action-icon"><img src="C:\message\images\plusround.png" alt="plusround"></span>
+                    <span class="action-icon"><img src="C:\message\images\search2.png" alt="search2"></span>
+                    <span class="action-icon"><img src="C:\message\images\more2.png" alt="more2"></span>
+                </div>
+            </div>
+
+            <div class="chat-messages">
+                <div class="message received">
+                    <div class="message-content">
+                        Hey did you check my new post?
+                    </div>
+                    <div class="message-time">20:11</div>
+                </div>
+
+                <div class="message sent">
+                    <div class="message-content">
+                        Will check later
+                    </div>
+                    <div class="message-time">20:13</div>
+                </div>
+
+                <div class="message received">
+                    <div class="message-content">
+                        Send me your project design
+                    </div>
+                    <div class="message-time">20:25</div>
+                </div>
+
+                <div class="message sent image-message">
+                    <img src="C:\message\images\chat2-1.png" alt="Food design">
+                    <div class="message-time">20:35</div>
+                </div>
+            </div>
+
+            <div class="chat-input-area">
+                <div class="input-actions">
+                    <span class="input-icon">😊</span>
+                    <span class="input-icon">📎</span>
+                    <input type="text" placeholder="Type a message" class="message-input">
+                    <span class="input-icon">🎤</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Sidebar (Profile) -->
+        <div class="profile-sidebar">
+            <div class="profile-header">
+                <h3>Profile</h3>
+                <span class="more-icon"> <span class="action-icon"><img src="C:\message\images\morelite.png" alt="morelite"></span></span>
+            </div>
+
+            <div class="profile-info">
+                <div class="profile-avatar">
+                    <img src="C:\message\images\user4-6.png" alt="William">
+                </div>
+                <h2>William</h2>
+                <p class="username">@Will521</p>
+                <div class="profile-actions">
+                    <button class="profile-btn">
+                        <span class="action-icon"><img src="C:\message\images\call.png" alt ="call"></span>
+                    </button>
+                    <button class="profile-btn"><span class="action-icon"><img src="C:\message\images\vidcall.png" alt="vidcall"></span>
+                    <button class="profile-btn"><span class="action-icon"><img src="C:\message\images\album.png" alt="album"></span>
+                    <button class="profile-btn"><span class="action-icon"><img src="C:\message\images\more2.png" alt="more2"></span></button>
+                </div>
+            </div>
+
+            <div class="media-section">
+                <h3>Media</h3>
+                <div class="media-grid">
+                    <img src="C:\message\images\media1-1.png" alt="Media 1">
+                    <img src="C:\message\images\media2-1.png" alt="Media 2">
+                    <img src="C:\message\images\media4-1.png" alt="Media 3">
+                    <img src="C:\message\images\media5-1.png" alt="Media 4">
+                    <img src="C:\message\images\media6-1.png" alt="Media 5">
+                    <img src="C:\message\images\chat2-1.png"  alt="Media 6">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="message.js"></script>
+</body>
+</html>
