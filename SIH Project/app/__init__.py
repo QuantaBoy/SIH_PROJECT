@@ -24,6 +24,9 @@ def app_run():
     from app.routes.user_routes import profile_bp
     app.register_blueprint(profile_bp,url_prefix='/profile')
 
+    from app.routes.message_routes import message_bp
+    app.register_blueprint(message_bp,url_prefix='/message')
+
     with app.app_context():
         db.create_all()
 
